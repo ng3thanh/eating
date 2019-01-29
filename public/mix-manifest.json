@@ -1,0 +1,9 @@
+{
+    "/admin/css/local.css": "/admin/css/local.css",
+    "/admin/js/utilities/common.js": "/admin/js/utilities/common.js",
+    "/admin/js/utilities/form.validate.js": "/admin/js/utilities/form.validate.js",
+    "/admin/js/utilities/jquery.validate.messages.js": "/admin/js/utilities/jquery.validate.messages.js",
+    "/admin/js/utilities/jquery.validate.min.js": "/admin/js/utilities/jquery.validate.min.js",
+    "/admin/js/utilities/scroll.bar.js": "/admin/js/utilities/scroll.bar.js",
+    "/admin/js/pages/dashboard.js": "/admin/js/pages/dashboard.js"
+}
