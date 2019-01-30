@@ -17,12 +17,14 @@ Route::middleware('guest')->namespace('Web')->group(function () {
     Route::get('/', 'MainController@index')->name('main');
 });
 
-Route::prefix('admin')->namespace('Admin')->group(function () {
-    Route::prefix('management')->middleware('admin')->group(function () {
-        Route::get('/', 'MainController@index')->name('dashboard');
-        Route::get('/food', 'MainController@food')->name('get.food');
-        Route::get('/menu', 'MainController@menu')->name('get.menu');
-    });
+Route::prefix('admintl')->middleware('admin')->namespace('Admin')->group(function () {
+    Route::get('/', 'MainController@index')->name('dashboard');
+    Route::get('/food', 'MainController@food')->name('get.food');
+
+    Route::get('/menu', 'MainController@menu')->name('get.menu');
+    Route::get('/menu/{id}', 'MainController@menuDetail')->name('detail.menu');
+
+    Route::get('/location', 'MainController@location')->name('get.location');
 });
 
 Route::middleware('guest')->namespace('Auth')->group(function () {
