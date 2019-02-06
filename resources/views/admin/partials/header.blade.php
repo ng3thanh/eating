@@ -1,7 +1,7 @@
 <header class="main-header">
     <a href="{{ route('dashboard') }}" class="logo">
-        <span class="logo-mini"><b>TDP</b></span>
-        <span class="logo-lg"><b>Admin </b>TDP</span>
+        <span class="logo-mini"><b>T&H</b></span>
+        <span class="logo-lg"><b>Admin </b>T&H</span>
     </a>
 
     <nav class="navbar navbar-static-top">

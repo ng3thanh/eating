@@ -3,20 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>T&L | Log in</title>
+        <title>T&H | Log in</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <link rel="stylesheet" href="{{ asset('lib/bootstrap/dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('lib/bootstrap/dist/css/bootstrap.min.css') }}">
+        @include('admin.assets.css')
     </head>
-    <body>
-        <div class="">
-            <div class="">
+    <body class="hold-transition login-page">
+        <div class="login-box">
+            <div class="login-logo">
                 <a href="#">
-                    <b>T&L</b> Login
+                    <b>T&H</b> Login
                 </a>
             </div>
 
-            <div class="col-lg-4">
+            <div class="login-box-body">
                 <form accept-charset="UTF-8" role="form" method="post" action="{{ route('auth.login.attempt') }}">
                     {{ csrf_field() }}
                     <div class="form-group has-feedback {{ ($errors->has('username')) ? 'has-error' : '' }}">
@@ -46,7 +45,6 @@
             </div>
         </div>
 
-        <script src="{{ asset('lib/jquery/dist/jquery.min.js') }}"></script>
-        <script src="{{ asset('lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        @include('admin.assets.js')
     </body>
 </html>

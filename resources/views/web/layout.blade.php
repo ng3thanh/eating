@@ -6,18 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        @include('web.assets.css')
+        @include('admin.assets.css')
         @yield('css')
-        <link rel="shortcut icon" href="{{ asset('web/img/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     </head>
 
     <body>
-        {{--@include('web.partials.header')--}}
+
         @yield('content')
-        {{--@include('web.partials.footer')--}}
-{{--        @include('web.partials.connect.phone')--}}
-{{--        @include('web.partials.connect.facebook')--}}
-        @include('web.assets.js')
+        @include('admin.assets.js')
         @yield('script')
     </body>
 </html>

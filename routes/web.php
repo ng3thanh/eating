@@ -19,12 +19,19 @@ Route::middleware('guest')->namespace('Web')->group(function () {
 
 Route::prefix('admintl')->middleware('admin')->namespace('Admin')->group(function () {
     Route::get('/', 'MainController@index')->name('dashboard');
-    Route::get('/food', 'MainController@food')->name('get.food');
 
     Route::get('/menu', 'MainController@menu')->name('get.menu');
     Route::get('/menu/{id}', 'MainController@menuDetail')->name('detail.menu');
+    Route::post('/menu/create', 'MainController@menuCreate')->name('create.menu');
+    Route::post('/menu/update/{id}', 'MainController@menuUpdate')->name('update.menu');
+    Route::post('/menu/delete/{id}', 'MainController@menuDelete')->name('delete.menu');
 
-    Route::get('/location', 'MainController@location')->name('get.location');
+    Route::get('/food', 'MainController@food')->name('get.food');
+    Route::get('/food/{id}', 'MainController@foodDetail')->name('detail.food');
+    Route::post('/food/create', 'MainController@foodCreate')->name('create.food');
+    Route::post('/food/update/{id}', 'MainController@foodUpdate')->name('update.food');
+    Route::post('/food/delete/{id}', 'MainController@foodDelete')->name('delete.food');
+
 });
 
 Route::middleware('guest')->namespace('Auth')->group(function () {

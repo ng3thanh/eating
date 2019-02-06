@@ -25,31 +25,24 @@
 
             <li class="header">SIDEBAR MENU</li>
 
-            <li class="active">
+            <li>
                 <a href="{{ route('dashboard') }}">
                     <i class="fa fa-dashboard"></i>
                     <span> Dashboard</span>
                 </a>
             </li>
 
-            <li class="true">
+            <li class="{{ request()->route()->getName() == 'get.menu' ? 'active' : '' }}">
                 <a href="{{ route('get.menu') }}">
                     <i class="fa fa-list"></i>
                     <span> Menu</span>
                 </a>
             </li>
 
-            <li class="true">
+            <li class="{{ request()->route()->getName() == 'get.food' ? 'active' : '' }}">
                 <a href="{{ route('get.food') }}">
                     <i class="fa fa-coffee"></i>
                     <span> Food</span>
-                </a>
-            </li>
-
-            <li class="true">
-                <a href="{{ route('get.location') }}">
-                    <i class="fa fa-map-signs"></i>
-                    <span> Location</span>
                 </a>
             </li>
         </ul>
